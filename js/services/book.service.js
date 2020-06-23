@@ -4,7 +4,8 @@ export const bookService = {
     getBooks,
     getBookById,
     addReview,
-    createReviews
+    createReviews,
+    addBookFromGoogle
 }
 
 const KEY = 'books'
@@ -456,6 +457,12 @@ function getBooks() {
   if (utilService.loadFromStorage(KEY)) return Promise.resolve(utilService.loadFromStorage(KEY));
   else utilService.saveToStorage(KEY, gBooks); 
   return Promise.resolve(utilService.loadFromStorage(KEY));
+}
+
+function addBookFromGoogle(bookObj) {
+  gBooks.push(bookObj);
+  utilService.saveToStorage(KEY, gBooks);
+  console.log(utilService.loadFromStorage(KEY))
 }
 
 function getBookById(id) {
