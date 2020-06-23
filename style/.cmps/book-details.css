@@ -1,0 +1,35 @@
+.book-details button {
+    text-align: left;
+}
+
+.book-details img {
+    height: 200px;
+}
+
+.book-details p {
+    margin: 5px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.sale {
+    background-color: aquamarine;
+    margin: 0 auto;
+    height: 50px;
+    width: 300px;
+}
+
+.sale p {
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+
+.description {
+    cursor: pointer;
+}
